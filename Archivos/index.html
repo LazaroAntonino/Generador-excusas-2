@@ -7,7 +7,15 @@
 </head>
 <body>
     function generarExcusa(){
-
+        let quien = ['Mi perro', 'Mi abuela', 'Un vecino', 'Un amigo', 'Mi hermano'];
+        let accion = ['se comió', 'rompió', 'quemó', 'tiró', 'escondió'];
+        let que = ['mi tarea', 'mi libro', 'mi computadora', 'mi celular', 'mi almuerzo'];
+        let cuando = ['ayer', 'hace un rato', 'hace un mes', 'hace un año', 'hace un minuto'];
+        let quienRandom = Math.floor(Math.random() * quien.length);
+        let accionRandom = Math.floor(Math.random() * accion.length);
+        let queRandom = Math.floor(Math.random() * que.length);
+        let cuandoRandom = Math.floor(Math.random() * cuando.length);
+        return quien[quienRandom] + ' ' + accion[accionRandom] + ' ' + que[queRandom] + ' ' + cuando[cuandoRandom];
     }
 </body>
 </html>
