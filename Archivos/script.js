@@ -21,37 +21,41 @@ function añadirLugar(fraseLugar) {
 }
 
 function insertarExcusa() {
-    var parrafo = document.querySelector('.excusagenerada');
-    parrafo.innerText = GeneradorExcusas();
+    var parrafo = document.querySelector('.excusagenerada');                            //asignamos la variable parrafo al parrafo de excusa generada
+    parrafo.innerText = GeneradorExcusas();                                             //le asignamos al parrafo de excusa generada el valor de la función GeneradorExcusas
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {                              //cuando recargue la pagina llamamos a la función insertarExcusa
     insertarExcusa();
 });
 
-var boton = document.getElementById('botonexcusa');
-boton.addEventListener('click', function() {
+var boton = document.getElementById('botonexcusa');                                     //asignamos la variable boton al boton de excusa
+boton.addEventListener('click', function() {                                            //cuando se haga click en el boton de excusa llamamos a la función insertarExcusa   
     insertarExcusa();
 });
-// Añadimos boton e inner para introducir nuevas frases.
 
-var botonAñadirFrase = document.getElementById('botonAñadirFrase');
-botonAñadirFrase.addEventListener('click', function() {
-    var nuevaFrase= document.getElementById('nuevaFrase').value;
-    var selectorDeFrases = document.getElementById('selectorFrases');
-    if (nuevaFrase){
-        if (selectorDeFrases.value === 'sujeto'){
-            añadirSujeto(nuevaFrase);
+// Añadimos boton e imput para añadir nuevas frases.
+
+var botonAñadirFrase = document.getElementById('botonAñadirFrase');                     //asignamos la variable botonAñadirFrase al boton de añadir frase
+botonAñadirFrase.addEventListener('click', function() {                                 //añadimos un evento al boton de añadir frase
+    var nuevaFrase= document.getElementById('nuevaFrase').value;                        //asignamos la variable nuevaFrase al valor del input de nueva frase
+    var selectorDeFrases = document.getElementById('selectorFrases');                   //asignamos la variable selectorDeFrases al selector de frases
+    if (nuevaFrase){                                                                    //si nuevaFrase es verdadero
+        switch (selectorDeFrases.value) {                                               //hacemos un switch con el valor del selector de frases                            
+            case 'sujeto':
+                añadirSujeto(nuevaFrase);
+                break;
+            case 'accion':
+                añadirAccion(nuevaFrase);
+                break;
+            case 'objeto':
+                añadirObjeto(nuevaFrase);
+                break;
+            case 'lugar':
+                añadirLugar(nuevaFrase);
+                break;
+            default:
+                break;
         }
-        else if (selectorDeFrases.value === 'accion'){
-            añadirAccion(nuevaFrase);
-        }
-        else if (selectorDeFrases.value === 'objeto'){
-            añadirObjeto(nuevaFrase);
-        }
-        else if (selectorDeFrases.value === 'lugar'){
-            añadirLugar(nuevaFrase);
-        }
-        }
-        document.getElementById('nuevaFrase').value = '';
+        document.getElementById('nuevaFrase').value = '';  }                              //limpiamos el input de nueva frase
     });
