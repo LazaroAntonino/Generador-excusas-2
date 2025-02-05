@@ -7,21 +7,32 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>No te lo vas a creer pero</h1>
-    <p class="excusagenerada"></p>
-    <button id="botonexcusa">Generar Excusa</button>
+    <div class="divMaster">
+        <div class="divMaster1">
+            <h1>No te lo vas a creer pero</h1>
+            <br></br>
+            <p class="excusagenerada"></p>
+            <button id="botonexcusa">Generar Excusa</button>
+        </div>
+        <div class="divMaster2">
+            <h1>Administrar Frases</h1>
+            <br></br>
+            <ul id="listaFrases">
+                <!-- Añadimos las frases que se encuentran en el array de frases -->
+            </ul>
+                <!-- Añadimos un campo de entrada para la frase del usuario -->
+            <input type="text" id="nuevaFrase" placeholder="Introduce una nueva frase">
+            <button id="botonAñadirFrase">Añadir Frase</button>
 
-    <!-- Añadimos un campo de entrada para la frase del usuario -->
-    <input type="text" id="nuevaFrase" placeholder="Introduce una nueva frase">
-    <button id="botonAñadirFrase">Añadir Frase</button>
-
-        <label for="frases">Elige una parte de la frase:</label>
-    <select id="selectorFrases" name="frases">
-    <option value="sujeto">Sujeto</option>
-    <option value="accion">Accion</option>
-    <option value="objeto">Objeto</option>
-    <option value="lugar">Lugar</option>
-    </select>
+                <label for="frases">Elige una parte de la frase:</label>
+            <select id="selectorFrases" name="frases">
+            <option value="sujeto">Sujeto</option>
+            <option value="accion">Accion</option>
+            <option value="objeto">Objeto</option>
+            <option value="lugar">Lugar</option>
+            </select>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

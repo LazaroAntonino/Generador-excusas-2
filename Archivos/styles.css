@@ -1,0 +1,32 @@
+body {
+    background-color: rgb(199, 195, 195);
+}
+
+.divMaster{
+    display: flex;
+    justify-content: space-around;
+}
+
+.divMaster1{
+    margin: 10px;
+    text-align: center;
+}
+
+.divMaster1 p{
+    background-color: rgba(61, 60, 60, 0.159);
+    align-items: center;
+    border-radius: 2px;
+}
+
+.divMaster2{
+    text-align: center;
+    margin: 10px;
+}
+
+.divMaster2 h1{
+    margin: 30px;
+}
+
+.botonAñadirFrase{
+    color: aqua;
+}
