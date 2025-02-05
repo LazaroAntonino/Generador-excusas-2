@@ -1,3 +1,5 @@
+var boton = document.getElementById('botonexcusa');
+
 function GeneradorExcusas() {
     const sujeto = ['Mi abuelo', 'Mi padre', 'Mi vecino', 'Un extraterrestre'];
     const accion = ['se comió', 'rompió', 'tiró', 'quemó'];
@@ -18,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Evento que se ejecuta cuando se hace clic en el botón
-var boton = document.getElementById('botonexcusa');
 boton.addEventListener('click', function() {
     insertarExcusa();
 });
