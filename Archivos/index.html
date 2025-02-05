@@ -4,18 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    function generarExcusa(){
-        let quien = ['Mi perro', 'Mi abuela', 'Un vecino', 'Un amigo', 'Mi hermano'];
-        let accion = ['se comió', 'rompió', 'quemó', 'tiró', 'escondió'];
-        let que = ['mi tarea', 'mi libro', 'mi computadora', 'mi celular', 'mi almuerzo'];
-        let cuando = ['ayer', 'hace un rato', 'hace un mes', 'hace un año', 'hace un minuto'];
-        let quienRandom = Math.floor(Math.random() * quien.length);
-        let accionRandom = Math.floor(Math.random() * accion.length);
-        let queRandom = Math.floor(Math.random() * que.length);
-        let cuandoRandom = Math.floor(Math.random() * cuando.length);
-        return quien[quienRandom] + ' ' + accion[accionRandom] + ' ' + que[queRandom] + ' ' + cuando[cuandoRandom];
-    }
+    <h1>No te lo vas a creer pero</h1>
+    <p class="excusagenerada"></p>
+    <button id="botonexcusa">Generar Excusa</button>
+    <script src="script.js"></script>
+
 </body>
 </html>
