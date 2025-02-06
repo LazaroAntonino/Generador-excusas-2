@@ -7,19 +7,6 @@ function GeneradorExcusas() {
     return `${sujeto[Math.floor(Math.random() * sujeto.length)]} ${accion[Math.floor(Math.random() * accion.length)]} ${objeto[Math.floor(Math.random() * objeto.length)]} ${lugar[Math.floor(Math.random() * lugar.length)]}`;
 }
 
-function añadirSujeto(fraseSujeto) {
-    sujeto.push(fraseSujeto);
-}
-function añadirAccion(fraseAccion) {
-    accion.push(fraseAccion);
-}
-function añadirObjeto(fraseObjeto) {
-    objeto.push(fraseObjeto);
-}
-function añadirLugar(fraseLugar) {
-    lugar.push(fraseLugar);
-}
-
 function insertarExcusa() {
     var parrafo = document.querySelector('.excusagenerada');                            //asignamos la variable parrafo al parrafo de excusa generada
     parrafo.innerText = GeneradorExcusas();                                             //le asignamos al parrafo de excusa generada el valor de la función GeneradorExcusas
@@ -43,16 +30,16 @@ botonAñadirFrase.addEventListener('click', function() {                        
     if (nuevaFrase){                                                                    //si nuevaFrase es verdadero
         switch (selectorDeFrases.value) {                                               //hacemos un switch con el valor del selector de frases                            
             case 'sujeto':
-                añadirSujeto(nuevaFrase);
+                sujeto.push(nuevaFrase);                                                //añadimos la nueva frase al array sujeto
                 break;
             case 'accion':
-                añadirAccion(nuevaFrase);
+                accion.push(nuevaFrase);                                                //añadimos la nueva frase al array accion                   
                 break;
             case 'objeto':
-                añadirObjeto(nuevaFrase);
+                objeto.push(nuevaFrase);                                                //añadimos la nueva frase al array objeto
                 break;
             case 'lugar':
-                añadirLugar(nuevaFrase);
+                lugar.push(nuevaFrase);                                                 //añadimos la nueva frase al array lugar
                 break;
             default:
                 break;
